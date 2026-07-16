@@ -32,24 +32,24 @@ O banco de dados `loja.db` conta com as tabelas:
    cd backend
 
    Ative o seu ambiente virtual:
-
-Bash
+   
+```Bash
 .\venv\Scripts\activate
 Instale as dependências:
 
-Bash
+
 pip install fastapi uvicorn cohere google-genai
 Inicie o servidor:
 
-Bash
+
 python -m uvicorn main:app --reload
 2. Frontend (React)
 Navegue até a pasta do frontend:
 
-Bash
+
 cd frontend
 Instale as dependências e inicie:
 
-Bash
+
 npm install
 npm start
