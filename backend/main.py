@@ -18,17 +18,13 @@ except ImportError:
 
 app = FastAPI(title="Chatbot de Loja - Inteligente e Seguro")
 
-# CORS atualizado para permitir a conexão segura com a sua Vercel e o seu ambiente local
+# CORS com permissão total aberta para evitar qualquer bloqueio na Vercel
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://localhost:5173",
-        "https://desafio-tecnico-chat-bot.vercel.app"
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=["*"],             # Permite requisições de qualquer origem externa
+    allow_credentials=False,         # Obrigatório ser False quando usamos "*" no allow_origins
+    allow_methods=["*"],             # Permite todos os métodos (GET, POST, OPTIONS, etc.)
+    allow_headers=["*"],             # Permite todos os cabeçalhos
 )
 
 # Se você tiver uma chave da Cohere, cole aqui. Se não tiver ou der erro, o sistema local assume!
