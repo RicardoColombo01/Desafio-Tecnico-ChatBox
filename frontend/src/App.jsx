@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
-// 1. Declarando a URL padrão para nunca mais dar erro de variável indefinida
-const API_URL = "http://localhost:8000";
+// Verifica se você está no seu PC testando localmente. 
+// Se NÃO estiver, ele obrigatoriamente usa o link da internet!
+const API_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+  ? "http://localhost:8000" 
+  : "https://desafio-chatbot-back.onrender.com";
 
 export default function App() {
   const [input, setInput] = useState('');
@@ -18,7 +21,7 @@ export default function App() {
     setLoading(true);
 
     try {
-      // 2. Adicionado 'const res = await' para definir a variável da resposta do servidor
+      // Faz a requisição de forma dinâmica usando a constante inteligente
       const res = await fetch(`${API_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
