@@ -28,16 +28,16 @@ O banco de dados `loja.db` conta com as tabelas:
 
 ### 1. Backend (Python)
 1. Navegue até a pasta do backend:
-   ```bash
+   ```Bash
    cd backend
 
    Ative o seu ambiente virtual:
 
-Bash
+ ```Bash
 .\venv\Scripts\activate
 Instale as dependências:
 
-Bash
+ ```Bash
 pip install fastapi uvicorn cohere google-genai
 Inicie o servidor:
 
