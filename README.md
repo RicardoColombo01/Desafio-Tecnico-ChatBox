@@ -20,6 +20,8 @@ O banco de dados `loja.db` conta com as tabelas:
 
 ---
 
+### Link:(https://desafio-tecnico-chat-bot.vercel.app)
+
 ## 🚀 Como Executar o Projeto
 
 ### 1. Backend (Python)
