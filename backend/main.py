@@ -27,11 +27,11 @@ app.add_middleware(
 )
 
 # Se você tiver uma chave da Cohere, cole aqui. Se não tiver ou der erro, o sistema local assume!
-COHERE_API_KEY = "SUA_CHAVE_COHERE_AQUI"
+COHERE_API_KEY = "JoQzywK10446euiCrxJLS6gR30v1Z8HrISqyCwyk"
 
 # Inicializa o cliente se a biblioteca estiver disponível e a chave não for a padrão
 co = None
-if COHERE_INSTALADO and COHERE_API_KEY and COHERE_API_KEY != "SUA_CHAVE_COHERE_AQUI":
+if COHERE_INSTALADO and COHERE_API_KEY and COHERE_API_KEY != "JoQzywK10446euiCrxJLS6gR30v1Z8HrISqyCwyk":
     try:
         co = cohere.Client(api_key=COHERE_API_KEY)
     except Exception:
