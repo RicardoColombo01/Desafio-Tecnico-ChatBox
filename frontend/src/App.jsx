@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
-// 1. Declarando a URL padrão para nunca mais dar erro de variável indefinida
-const API_URL = "http://localhost:8000";
+// Verifica se o site está rodando no seu PC (localhost). Se não estiver, usa o backend online.
+const API_URL = window.location.hostname === "localhost" 
+  ? "http://localhost:8000" 
+  : "https://desafio-chatbot-back.onrender.com"; // <-- Quando você tiver o link da Render, coloque ele aqui!
 
 export default function App() {
   const [input, setInput] = useState('');
